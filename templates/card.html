@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+	<strong>Twoj dziennik:</strong>
+{% endblock %}
+{% block content %}
+	<div><h1>DIARY</h1></div>
+  <div>
+    {% for card in cards %}
+      <p>{{ card.card_title }}</p>
+			<img src="/static/{{card.card_images}}" alt="img" >
+
+
+    {% endfor %}
+  </div>
+{% endblock %}

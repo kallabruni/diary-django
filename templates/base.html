@@ -1,0 +1,14 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>DIARY</title>
+	<link rel="stylesheet" href="{% static 'moj.css' %}">
+</head>
+<body>
+<h3>{% block title %}tytuł{% endblock %}</h3>
+{% block content %}zawartość{% endblock %}
+{% block footer %}Katarzyna Parzybut{% endblock %}
+</body>
+</html>
