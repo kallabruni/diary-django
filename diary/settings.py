@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'cards',
+    'cards.apps.CardsConfig',
+    'account.apps.AccountConfig',
 ]
 
 MIDDLEWARE = [
@@ -104,9 +105,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pl-pl'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Poland'
 
 USE_I18N = True
 
@@ -126,4 +127,18 @@ STATICFILES_DIRS = (
 )
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_ROOT = os.path.join(BASE_DIR,'my_media')
+
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'all_cards'
+
+LOGOUT_URL = 'logout'
+LOGOUT_REDIRECT_URL = 'login'
+
+EMAIL_BACKEND= 'django.core.mail.backends.console.EmailBackend'
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'account@gmail.com'
+EMAIL_HOST_PASSWORD = ''
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True

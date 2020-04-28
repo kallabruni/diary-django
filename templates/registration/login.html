@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+	<strong>log2:</strong>
+{% endblock %}
+{% block content %}
+	LOgowanie2:
+  <form method="post">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <button type="submit" name="button" value="Zaloguj">Zaloguj</button>
+  </form>
+<p>
+<a href="{% url "password_reset" %}">Zapomialeś hasła.</a>
+<a href="{% url "registration" %}">Zarejstruj się.</a>
+</p>
+{% endblock %}
