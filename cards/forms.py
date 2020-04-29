@@ -4,4 +4,4 @@ from .models import Card
 class CardForm(ModelForm):
     class Meta:
         model = Card
-        fields = ['card_images', 'card_title', 'card_description']
+        fields = ['card_images', 'card_title', 'card_description', 'card_date_hapend', 'status']
