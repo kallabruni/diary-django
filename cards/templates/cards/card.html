@@ -5,11 +5,15 @@
 {% block content %}
 	<div><h1>DIARY</h1></div>
   <div>
+			<a href="{% url 'new_card' %}">nowy post</a>
     {% for card in cards %}
-			<h3>{{ card.card_date_long }} - {{ card.card_title }}</h3>
+			<h3>{{ card.card_date_hapend }} - {{ card.card_title }}</h3>
       <img src="/media/{{ card.card_images }}" height="200" width="300" alt="img" >
 			<p>{{ card.card_description }}</p>
+			<a href="{% url 'edit_card' card.id %}">edytuj</a>
+			<a href="{% url 'delete_card' card.id %}">usuń</a>
 			<br>
     {% endfor %}
   </div>
+	{% include "cards/pagination.html" with page=cards %}
 {% endblock %}

@@ -7,5 +7,5 @@ urlpatterns = [
     #path("", AllCards.as_view(), name="all_cards"),
     path('new/', new_card, name="new_card"),
     path('edit/<int:id>/', edit_card, name="edit_card"),
-    path('delete/<int:id>/', delete_card, name="elete_card"),
+    path('delete/<int:id>/', delete_card, name="delete_card"),
 ]
