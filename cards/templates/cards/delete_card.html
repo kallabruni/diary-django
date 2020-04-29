@@ -1,13 +1,12 @@
 {% extends "base.html" %}
 
 {% block title %}
-	<strong>Dodaj post do dziennika:</strong>
+	<strong>Usuń post:</strong>
 {% endblock %}
 {% block content %}
   <form method="post">
-		{% csrf_token %}
-		{{ form }}
-    <button type="submit">dodaj post</button>
+    {% csrf_token %}
+    <button type="submit">usun post</button>
   </form>
   </div>
 {% endblock %}

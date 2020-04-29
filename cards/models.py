@@ -8,6 +8,9 @@ class Card(models.Model):
     card_title = models.CharField(max_length=64, blank=False, unique=True)
     card_description = models.TextField(default="")
 
+    class Meta:
+        verbose_name="card"
+
     def __str__(self):
         return self.title_date()
 
